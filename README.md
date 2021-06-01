@@ -22,7 +22,6 @@ firebase_auth: ^1.1.4</br>
 <h1>To start the project</h1> 
 <code>flutter run -d chrome --web-renderer html</code>
 
-
 <h1>Getting Started</h1>
 
 This project is a starting point for a Flutter application.
