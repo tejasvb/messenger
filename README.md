@@ -14,6 +14,7 @@ firebase_auth: ^1.1.4</br>
   provider: ^4.3.2+2</br>
   uuid: ^3.0.4</br>
   splashscreen: ^1.3.5</br>
+<h1>To start the project</h1> 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
