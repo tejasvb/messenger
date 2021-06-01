@@ -1,6 +1,10 @@
 # messager
 
 A new Flutter application.
+A simple messager :
+    Sign in with 📧
+    And firebase 
+    
 <h1>library which used:-</h1>
 firebase_auth: ^1.1.4</br>
   firebase_auth_web:</br>
@@ -16,8 +20,9 @@ firebase_auth: ^1.1.4</br>
   splashscreen: ^1.3.5</br>
 <h1>To start the project</h1> 
 <code>flutter run -d chrome --web-renderer html</code>
-<h1>Getting Started</h1>
 
+
+<h1>Getting Started</h1>
 
 This project is a starting point for a Flutter application.
 
