@@ -23,7 +23,7 @@ firebase_auth: ^1.1.4</br>
 <code>flutter run -d chrome --web-renderer html</code>
 <h1>Icon</h1>
 
-<center><img src="https://user-images.githubusercontent.com/63836638/120363825-36c73600-c32a-11eb-8840-ee092c9d7b41.png" width="400" height="400"></center>
+:---<img src="https://user-images.githubusercontent.com/63836638/120363825-36c73600-c32a-11eb-8840-ee092c9d7b41.png" width="400" height="400"></center>
 
 <h1>Getting Started</h1>
 
