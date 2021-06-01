@@ -18,6 +18,11 @@ firebase_auth: ^1.1.4</br>
 ###(flutter run -d chrome --web-renderer html)###
 
 ## Getting Started
+Markup :  # Heading 1 #
+
+-OR-
+
+Markup :  ============= (below H1 text)
 
 This project is a starting point for a Flutter application.
 
