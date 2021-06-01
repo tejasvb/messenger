@@ -1,9 +1,9 @@
 # messager
 
-A new Flutter application.
-A simple messager :
-    Sign in with 📧
-    And firebase 
+A new Flutter application.</br>
+A simple messager :</br>
+    Sign in with 📧</br>
+    And firebase </br>
     
 <h1>library which used:-</h1>
 firebase_auth: ^1.1.4</br>
