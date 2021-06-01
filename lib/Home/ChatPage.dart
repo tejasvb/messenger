@@ -32,18 +32,17 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String currentUserUid = FirebaseAuth.instance.currentUser.uid;
     void uploadData({String message}) {
       if (message.trim().toString().isNotEmpty) {
         message = message.trimLeft();
         message = message.trimRight();
         FirebaseFirestore.instance
             .collection('message')
-            .doc(currentUserUid)
+            .doc(FirebaseAuth.instance.currentUser.uid)
             .collection(uid)
             .add({
               "message": message.toString(),
-              "From": currentUserUid,
+              "From": FirebaseAuth.instance.currentUser.uid,
               "To": uid,
               "DataAndTime": DateTime.now()
             })
@@ -53,10 +52,10 @@ class ChatPage extends StatelessWidget {
         FirebaseFirestore.instance
             .collection('message')
             .doc(uid)
-            .collection(currentUserUid)
+            .collection(FirebaseAuth.instance.currentUser.uid)
             .add({
               "message": message.toString(),
-              "From": currentUserUid,
+              "From": FirebaseAuth.instance.currentUser.uid,
               "To": uid,
               "DataAndTime": DateTime.now()
             })
@@ -86,7 +85,7 @@ class ChatPage extends StatelessWidget {
               child: StreamBuilder(
                 stream: FirebaseFirestore.instance
                     .collection('message')
-                    .doc(currentUserUid)
+                    .doc(FirebaseAuth.instance.currentUser.uid)
                     .collection(uid)
                     .orderBy("DataAndTime", descending: false)
                     .snapshots(),
@@ -143,18 +142,18 @@ class ChatPage extends StatelessWidget {
                             padding: EdgeInsets.only(
                                 left: 14, right: 14, top: 10, bottom: 10),
                             child: Align(
-                              alignment:
-                                  (document['From'].toString() != currentUserUid
-                                      ? Alignment.topLeft
-                                      : Alignment.topRight),
+                              alignment: (document['From'].toString() !=
+                                      FirebaseAuth.instance.currentUser.uid
+                                  ? Alignment.topLeft
+                                  : Alignment.topRight),
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: (document['From'].toString() !=
-                                          currentUserUid
+                                          FirebaseAuth.instance.currentUser.uid
                                       ? MessageBorder().sendData()
                                       : MessageBorder().receivedData()),
                                   color: (document['From'].toString() !=
-                                          currentUserUid
+                                          FirebaseAuth.instance.currentUser.uid
                                       ? ColorChatPage
                                           .receivedTextBackgroundColor
                                       : ColorChatPage.sendTextBackgroundColor),

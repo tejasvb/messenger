@@ -20,7 +20,6 @@ goBackToPreviousScreen(BuildContext context) {
   Navigator.pop(context);
 }
 
-var uid = FirebaseAuth.instance.currentUser.uid;
 
 class _EditProfileState extends State<EditProfile> {
   TextEditingController _editingNameController;
@@ -43,7 +42,7 @@ class _EditProfileState extends State<EditProfile> {
   }
 
   void _updateUser() {
-    FirebaseFirestore.instance.collection('users').doc(uid).update({
+    FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser.uid).update({
       "name": _editingNameController.text.toString(),
       "imageUri": imageLink.value.toString(),
     });
@@ -108,7 +107,7 @@ class _EditProfileState extends State<EditProfile> {
             child: StreamBuilder(
               stream: FirebaseFirestore.instance
                   .collection('users')
-                  .where('uid', isEqualTo: uid)
+                  .where('uid', isEqualTo: FirebaseAuth.instance.currentUser.uid)
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {

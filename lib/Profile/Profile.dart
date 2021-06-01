@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:messager/Colors/ColorsOfProfile.dart';
 import 'package:messager/Profile/EditProfile.dart';
 
-var uid = FirebaseAuth.instance.currentUser.uid;
 
 class Profile extends StatefulWidget {
   @override
@@ -26,7 +25,7 @@ class _ProfileState extends State<Profile> {
             child: StreamBuilder(
               stream: FirebaseFirestore.instance
                   .collection('users')
-                  .where('uid', isEqualTo: uid)
+                  .where('uid', isEqualTo: FirebaseAuth.instance.currentUser.uid)
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {

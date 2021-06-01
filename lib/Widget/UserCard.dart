@@ -62,7 +62,7 @@ class _UserCardState extends State<UserCard> {
                   StreamBuilder(
                     stream: FirebaseFirestore.instance
                         .collection('message')
-                        .doc(currentUser.uid)
+                        .doc(FirebaseAuth.instance.currentUser.uid)
                         .collection(widget.uid)
                         .orderBy("DataAndTime", descending: true)
                         .snapshots(),

@@ -93,7 +93,7 @@ class _SignUpState extends State<SignUp> {
               context: context,
               builder: (ctx) => ToastAlert(
                   title: "Sign In",
-                  text: "password enter a valid email",
+                  text: "please enter a valid email",
                   context: context));
         } else {
           if (password != confirmPassword) {

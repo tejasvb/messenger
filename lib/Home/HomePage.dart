@@ -14,14 +14,15 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-var currentUser = FirebaseAuth.instance.currentUser;
 
 class _HomePageState extends State<HomePage> {
   ValueNotifier<String> searchText;
 
+
   @override
   void initState() {
     searchText = ValueNotifier<String>("  ");
+
 
     super.initState();
   }
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               child: StreamBuilder(
                 stream: FirebaseFirestore.instance
                     .collection('users')
-                    .where('uid', isEqualTo: uid)
+                    .where('uid', isEqualTo:FirebaseAuth.instance.currentUser.uid.toString())
                     .snapshots(),
                 builder: (BuildContext context,
                     AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -161,7 +162,7 @@ class _HomePageState extends State<HomePage> {
 
                         return ListView(
                           children: snapshot.data.docs.map((document) {
-                            if (document['uid'] != currentUser.uid) {
+                            if (document['uid'] != FirebaseAuth.instance.currentUser.uid) {
                               return TextButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -204,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                         }
                         return ListView(
                           children: snapshot.data.docs.map((document) {
-                            if (document['uid'] != currentUser.uid) {
+                            if (document['uid'] != FirebaseAuth.instance.currentUser.uid) {
                               return TextButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -283,7 +284,7 @@ Widget listTileForUser({String uid, String imageUri, String name}) {
                 StreamBuilder(
                   stream: FirebaseFirestore.instance
                       .collection('message')
-                      .doc(currentUser.uid)
+                      .doc(FirebaseAuth.instance.currentUser.uid)
                       .collection(uid)
                       .orderBy("DataAndTime", descending: true)
                       .snapshots(),
