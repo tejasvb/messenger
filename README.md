@@ -1,7 +1,7 @@
 # messager
 ![image](https://user-images.githubusercontent.com/63836638/120362259-7f7def80-c328-11eb-8b2f-6027a445f2fe.png)
 
-<img src="https://user-images.githubusercontent.com/63836638/120362324-945a8300-c328-11eb-9ede-f9e330cb6af2.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/63836638/120362324-945a8300-c328-11eb-9ede-f9e330cb6af2.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="200" />
 
 
 A new Flutter application.</br>
