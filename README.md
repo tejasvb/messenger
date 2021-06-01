@@ -15,6 +15,8 @@ firebase_auth: ^1.1.4</br>
   uuid: ^3.0.4</br>
   splashscreen: ^1.3.5</br>
 <h1>To start the project</h1> 
+<bold>flutter run -d chrome --web-renderer html</bold>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
