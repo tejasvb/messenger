@@ -19,19 +19,27 @@ class MessageBorder {
   }
 }
 
-bool boolean = false;
-String currentDate = " ";
 
-class ChatPage extends StatelessWidget {
+
+class ChatPage extends StatefulWidget {
   ChatPage({this.imageUri, this.name, this.uid});
 
   final String imageUri;
   final String name;
   final String uid;
+
+  @override
+  _ChatPageState createState() => _ChatPageState();
+}
+
+class _ChatPageState extends State<ChatPage> {
   final message = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
+    bool boolean = false;
+    String currentDate = " ";
     void uploadData({String message}) {
       if (message.trim().toString().isNotEmpty) {
         message = message.trimLeft();
@@ -39,11 +47,11 @@ class ChatPage extends StatelessWidget {
         FirebaseFirestore.instance
             .collection('message')
             .doc(FirebaseAuth.instance.currentUser.uid)
-            .collection(uid)
+            .collection(widget.uid)
             .add({
               "message": message.toString(),
               "From": FirebaseAuth.instance.currentUser.uid,
-              "To": uid,
+              "To": widget.uid,
               "DataAndTime": DateTime.now()
             })
             .then((value) => print("send message"))
@@ -51,12 +59,12 @@ class ChatPage extends StatelessWidget {
 
         FirebaseFirestore.instance
             .collection('message')
-            .doc(uid)
+            .doc(widget.uid)
             .collection(FirebaseAuth.instance.currentUser.uid)
             .add({
               "message": message.toString(),
               "From": FirebaseAuth.instance.currentUser.uid,
-              "To": uid,
+              "To": widget.uid,
               "DataAndTime": DateTime.now()
             })
             .then((value) => print("send message"))
@@ -70,12 +78,12 @@ class ChatPage extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
           child: CircleAvatar(
-            backgroundImage: NetworkImage(imageUri),
+            backgroundImage: NetworkImage(widget.imageUri),
             radius: 30,
           ),
         ),
         backwardsCompatibility: true,
-        title: Text(name, style: TextStyle(color: ColorChatPage.titleColor)),
+        title: Text(widget.name, style: TextStyle(color: ColorChatPage.titleColor)),
         backgroundColor: ColorChatPage.backgroundAppbarColor,
       ),
       body: Container(
@@ -86,7 +94,7 @@ class ChatPage extends StatelessWidget {
                 stream: FirebaseFirestore.instance
                     .collection('message')
                     .doc(FirebaseAuth.instance.currentUser.uid)
-                    .collection(uid)
+                    .collection(widget.uid)
                     .orderBy("DataAndTime", descending: false)
                     .snapshots(),
                 builder: (BuildContext context,
@@ -182,7 +190,10 @@ class ChatPage extends StatelessWidget {
                                                   .width /
                                               10),
                                       child: Align(
-                                        alignment: Alignment.bottomRight,
+                                          alignment: (document['From'].toString() !=
+                                            FirebaseAuth.instance.currentUser.uid
+                                            ? Alignment.bottomLeft
+                                            : Alignment.bottomRight),
                                         child: Text(
                                           "$time",
                                           style: TextStyle(
