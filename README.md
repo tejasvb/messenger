@@ -29,7 +29,7 @@ firebase_auth: ^1.1.4</br>
 <p align="center">
     <img src="https://user-images.githubusercontent.com/63836638/120363825-36c73600-c32a-11eb-8840-ee092c9d7b41.png" width="400" height="400">
 </p>
-# Getting Started
+<h1> Getting Started</h1>
 
 This project is a starting point for a Flutter application.
 
