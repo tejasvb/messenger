@@ -6,7 +6,7 @@ class SplashScreenMessager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 7,
+      seconds: 5,
       navigateAfterSeconds: RegistrationScreen(),
       title: Text(
         'Messager-Web',
@@ -16,7 +16,7 @@ class SplashScreenMessager extends StatelessWidget {
       loadingText: Text("Loading"),
       photoSize: 100.0,
       loaderColor: Colors.green,
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.greenAccent,
     );
   }
 }
