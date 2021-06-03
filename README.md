@@ -4,7 +4,7 @@
 [![SC2 Video](https://github.com/tejasvb/messenger/blob/master/ScreenShot/SplashScreen.png )](https://www.youtube.com/watch?v=Zg2STqrju1M)</br></br>
 # Info
 A new Flutter application.</br>
-A simple messager :</br>
+A simple messenger :</br>
     Sign in with 📧</br>
 For database purpose used:</br>
      Firebase :-🔥
