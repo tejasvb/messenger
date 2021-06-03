@@ -1,7 +1,7 @@
 # Messager
 ![image](https://user-images.githubusercontent.com/63836638/120363474-d20bdb80-c329-11eb-9354-c03a3931baec.png)
-# Video of Complete project 
-[![SC2 Video](https://github.com/tejasvb/messenger/blob/master/ScreenShot/SplashScreen.png )](https://youtu.be/O7ZHproSEzU)</br></br>
+# DEMO of Complete project 
+[![SC2 Video](https://github.com/tejasvb/messenger/blob/master/ScreenShot/SplashScreen.png )](https://www.youtube.com/watch?v=Zg2STqrju1M)</br></br>
 # Info
 A new Flutter application.</br>
 A simple messager :</br>
@@ -13,8 +13,7 @@ For database purpose used:</br>
 firebase_auth: ^1.1.4</br>
   firebase_auth_web:</br>
   firebase: ^9.0.1</br>
-  universal_html: ^2.0.8</br>
-  fluttertoast: ^3.1.0</br>
+  universal_html: ^2.0.8</br>https://www.youtube.com/watch?v=Zg2STqrju1M
   firebase_database:</br>
   firebase_storage:</br>
   cloud_firestore_web: ^2.0.1</br>
