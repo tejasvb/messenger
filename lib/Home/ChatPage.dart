@@ -211,6 +211,7 @@ class _ChatPageState extends State<ChatPage> {
                         ],
                       );
                     }).toList(),
+                    reverse:true,
                   );
                 },
               ),
