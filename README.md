@@ -1,5 +1,7 @@
 # Messenger
 ![image](https://user-images.githubusercontent.com/63836638/120363474-d20bdb80-c329-11eb-9354-c03a3931baec.png)
+# Hosted Messenger
+ https://messager-ec3eb.web.app/#/
 # Demo of Complete project 
 [![SC2 Video](https://github.com/tejasvb/messenger/blob/master/ScreenShot/SplashScreen.png )](https://www.youtube.com/watch?v=Zg2STqrju1M)</br></br>
 # Info
