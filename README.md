@@ -13,7 +13,7 @@ For database purpose used:</br>
 firebase_auth: ^1.1.4</br>
   firebase_auth_web:</br>
   firebase: ^9.0.1</br>
-  universal_html: ^2.0.8</br>https://www.youtube.com/watch?v=Zg2STqrju1M
+  universal_html: ^2.0.8</br>
   firebase_database:</br>
   firebase_storage:</br>
   cloud_firestore_web: ^2.0.1</br>
