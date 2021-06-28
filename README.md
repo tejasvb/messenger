@@ -23,10 +23,9 @@ firebase_auth: ^1.1.4</br>
   splashscreen: ^1.3.5</br>
 <h1>To start the project</h1> 
 <code>flutter run -d chrome --web-renderer html</code>
-# Icon
-
+<h1> Icon </h1>
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/63836638/120363825-36c73600-c32a-11eb-8840-ee092c9d7b41.png" width="400" height="400">
+    <img src="https://user-images.githubusercontent.com/63836638/123621371-c1675c00-d828-11eb-8578-a2d70301f410.png" width="400" height="400">
 </p>
 <h1> Getting Started</h1>
 
